@@ -1,5 +1,7 @@
 .banner-wrapper {
+  height: 100vh;
   .banner-overlay {
+    height: 100%;
     position: relative;
 
     &::before {
@@ -56,6 +58,29 @@
           animation-delay: 4s;
         }
       }
+
+      .scroll {
+        cursor: pointer;
+        margin: auto;
+        width: 20px;
+        height: 30px;
+        position: relative;
+        top: 30vh;
+        border-radius: 40%;
+        border: 1px solid $white;
+        opacity: 0;
+        animation: opacityUp 1s ease-in 4s forwards;
+
+        .dot {
+          position: relative;
+          width: 5px;
+          height: 5px;
+          background: $white;
+          border-radius: 50%;
+          margin: auto;
+          animation: scrollDown 1s ease-in 4s alternate-reverse infinite;
+        }
+      }
     }
   }
   video {
@@ -95,5 +120,27 @@
   to {
     opacity: 1;
     top: 0px;
+  }
+}
+
+@keyframes scrollDown {
+  from {
+    opacity: 0;
+    top: 0px;
+  }
+
+  to {
+    opacity: 1;
+    top: 20px;
+  }
+}
+
+@keyframes opacityUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

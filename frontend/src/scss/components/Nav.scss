@@ -55,7 +55,7 @@
 
     li {
       margin: 10px;
-      font-size: 1.1em;
+
       position: relative;
       display: none;
 
@@ -74,7 +74,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          inset: 24px 2px 1px 0px;
+          inset: 30px 2px 1px 0px;
           height: 0.1rem;
           background: $black;
           transition: transform 0.3s ease-in-out;

@@ -7,15 +7,14 @@
           <h3>That's the distance between you and your goals!</h3>
           <p>Now let's get started.</p>
         </section>
+        <div class="scroll">
+          <div class="dot"></div>
+        </div>
       </section>
 
       <video autoplay loop muted>
         <source src="../../assets/videos/amst.mp4" />
       </video>
-
-      <div class="scroll">
-        <div class="dot"></div>
-      </div>
     </div>
   </div>
 </template>
