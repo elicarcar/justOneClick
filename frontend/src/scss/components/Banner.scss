@@ -23,20 +23,38 @@
       color: $white-soft;
 
       .heading-intro {
-        font-weight: 400;
-      }
+        & > * {
+          position: relative;
+        }
+        .orange {
+          font-weight: 400;
+          color: $orange;
+          font-size: 3em;
+          font-weight: 700;
+          text-shadow: 1px 1px $text-shadow-orange;
 
-      p {
-        margin-top: 20px;
-        font-size: 1.3em;
-        font-weight: 100;
-      }
+          opacity: 0;
 
-      .orange {
-        color: $orange;
-        font-size: 3em;
-        font-weight: 700;
-        text-shadow: 1px 1px $text-shadow-orange;
+          animation: fadeInUp 600ms ease forwards;
+          animation-delay: 2s;
+        }
+
+        h3 {
+          font-size: 1.3em;
+          font-weight: 300;
+          opacity: 0;
+          animation: fadeInUp 600ms ease forwards;
+          animation-delay: 3s;
+        }
+
+        p {
+          margin-top: 20px;
+
+          font-weight: 100;
+          opacity: 0;
+          animation: fadeInDown 900ms ease forwards;
+          animation-delay: 4s;
+        }
       }
     }
   }
@@ -53,5 +71,29 @@
   }
   to {
     background-color: $gray-l-transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    top: -10px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    top: 10px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0px;
   }
 }
