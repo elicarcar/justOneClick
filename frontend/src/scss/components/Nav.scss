@@ -1,0 +1,107 @@
+.logo {
+  padding: 10px;
+}
+.nav-wrapper {
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  @include media-is(mobile, true) {
+    display: flex;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+    padding: 10px 0 10px 0;
+
+    .hamburger {
+      cursor: pointer;
+      display: none;
+      //   align-self: flex-end;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      @include media-is(mobile) {
+        display: block;
+        div {
+          margin-bottom: 4px;
+          width: 30px;
+          height: 5px;
+          background: $black;
+        }
+      }
+
+      &.open {
+        div {
+          transition: opacity 2s ease-in;
+          transition: transform 0.5s ease-in-out;
+          transform: rotate(0deg);
+          position: relative;
+          &:nth-child(1) {
+            top: 10px;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            bottom: 8px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    li {
+      margin: 10px;
+      font-size: 1.1em;
+      position: relative;
+      display: none;
+
+      @include media-is(mobile, true) {
+        display: inline-block;
+        a {
+          transition: all 0.5s ease-in;
+        }
+
+        &::before {
+          content: ' ';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          inset: 24px 2px 1px 0px;
+          height: 0.1rem;
+          background: $black;
+          transition: transform 0.3s ease-in-out;
+          z-index: 1;
+        }
+
+        &:hover::before {
+          transform: scaleX(1);
+          transform-origin: center center;
+        }
+
+        &::before {
+          transform: scaleX(0);
+          transform-origin: center center;
+        }
+      }
+    }
+
+    &.nav-mobil-open {
+      @include media-is(mobile) {
+        width: 100%;
+        flex-direction: column;
+        li {
+          align-self: flex-start;
+          display: block;
+        }
+      }
+    }
+  }
+}

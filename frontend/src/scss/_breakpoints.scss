@@ -1,0 +1,36 @@
+$breakpoints: (
+  'xsmall': 359px,
+  'mobile-small': 400px,
+  'mobile': 668px,
+  'phablet': 768px,
+  'tablet-p': 800px,
+  'tablet-costum': 860px,
+  'tablet': 1023px,
+  'smallerscreen': 1200px,
+  'smallscreen': 1270px,
+  'netbook': 1365px,
+  'desktop': 1440px,
+);
+
+@mixin desktop() {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin media-is($breakpoint, $invert: false) {
+  // retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value != null {
+    @if $invert == false {
+      @media (max-width: $value) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $value + 1) {
+        @content;
+      }
+    }
+  }
+}
