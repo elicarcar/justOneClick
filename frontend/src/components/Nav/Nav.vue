@@ -1,9 +1,10 @@
 <template>
-  <div class="container">
+  <div class="container nav-container-sticky">
     <div class="nav-wrapper">
       <section class="logo">
         <img src="" alt="logo" />
       </section>
+
       <nav :class="open ? 'nav-mobil-open' : ''">
         <div class="hamburger" :class="open ? 'open' : ''" @click="toggleOpen">
           <div></div>
