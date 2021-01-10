@@ -3,7 +3,7 @@
     <div class="banner-overlay">
       <section class="intro">
         <section class="heading-intro">
-          <h1 class="orange">JustAClick</h1>
+          <h1 class="hero-header orange-anim">JustAClick</h1>
           <h3>That's the distance between you and your goals!</h3>
           <p>Now let's get started.</p>
         </section>

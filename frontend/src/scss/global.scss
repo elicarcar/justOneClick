@@ -42,6 +42,18 @@ h5 {
   color: $black-soft;
 }
 
+h4 {
+  font-size: 1.1em;
+}
+
+.h-thin {
+  font-weight: 100;
+}
+
+.h-bolder {
+  font-weight: 800;
+}
+
 p {
   color: $black-softer;
 }
@@ -52,7 +64,41 @@ li {
   font-weight: 500;
 }
 
+//layout
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero-header {
+  font-weight: 400;
+  font-size: 3em;
+  font-weight: 700;
+  text-shadow: 1px 1px $text-shadow-orange;
+}
+
+.orange {
+  color: $orange;
+}
+
 .block {
   width: 100vw;
-  min-height: 150vh;
+  min-height: 50vh;
+  padding: 50px 10px;
+}
+
+.p-small {
+  font-size: 0.8rem;
+  color: $black-softer;
+  font-weight: 100;
+}
+
+//icons
+
+.icons-orange {
+  color: $orange;
+  margin: 10px;
+  font-size: 1.5rem;
+  min-width: 2em;
 }

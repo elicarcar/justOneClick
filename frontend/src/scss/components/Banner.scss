@@ -29,13 +29,10 @@
           position: relative;
           color: $white;
         }
-        .orange {
-          font-weight: 400;
-          color: $orange;
-          font-size: 3em;
-          font-weight: 700;
-          text-shadow: 1px 1px $text-shadow-orange;
 
+        .orange-anim {
+          @extend .hero-header;
+          @extend .orange;
           opacity: 0;
 
           animation: fadeInUp 600ms ease forwards;

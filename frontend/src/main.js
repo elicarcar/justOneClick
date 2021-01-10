@@ -2,13 +2,19 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb'
+import { faBrain } from '@fortawesome/free-solid-svg-icons/faBrain'
+import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
+import { faEye } from '@fortawesome/free-solid-svg-icons/faEye'
 
 import './scss/index.scss'
-// import VueCoreVideoPlayer from 'vue-core-video-player'
 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
-// Vue.use(VueCoreVideoPlayer)
-// Vue.component(VueCoreVideoPlayer)
+
+library.add(faLightbulb, faBrain, faCode, faEye)
 
 new Vue({
   router,

@@ -1,0 +1,39 @@
+.kp-list {
+  padding: 30px calc(20% - 160px);
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  @include media-is(mobile) {
+    flex-direction: column;
+  }
+  .kp-item {
+    width: 50%;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+
+    @include media-is(mobile) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .item-inner {
+      @include media-is(mobile) {
+        width: 100%;
+        p {
+          font-size: 1em;
+          max-width: 85%;
+        }
+      }
+      .kp-head-wrapper {
+        margin-bottom: 10px;
+
+        @include media-is(mobile) {
+          h4 {
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}
