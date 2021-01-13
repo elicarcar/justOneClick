@@ -9,7 +9,7 @@
         Building brands and social movements with compelling ideas.
       </p>
     </div>
-    <KeyPointsList>
+    <List>
       <KeyPointsItem
         fas="fas"
         fasIcon="lightbulb"
@@ -38,17 +38,17 @@
         kpDescription="Branding"
         kpBody="We are aware of the importance of branding and have a distinctable identity of your own."
       />
-    </KeyPointsList>
+    </List>
   </section>
 </template>
 
 <script>
-import KeyPointsList from '@/components/KeyPointsList'
+import List from '@/components/List'
 import KeyPointsItem from '@/components/KeyPointsItem'
 export default {
   name: 'IntroBlock',
   components: {
-    KeyPointsList,
+    List,
     KeyPointsItem,
   },
 }

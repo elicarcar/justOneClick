@@ -8,13 +8,23 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb'
 import { faBrain } from '@fortawesome/free-solid-svg-icons/faBrain'
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode'
 import { faEye } from '@fortawesome/free-solid-svg-icons/faEye'
-
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import './scss/index.scss'
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
-library.add(faLightbulb, faBrain, faCode, faEye)
+library.add(
+  faLightbulb,
+  faBrain,
+  faCode,
+  faEye,
+  faFacebook,
+  faLinkedin,
+  faGithub
+)
 
 new Vue({
   router,

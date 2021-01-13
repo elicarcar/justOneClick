@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'KeyPointsList',
+  name: 'List',
 }
 </script>

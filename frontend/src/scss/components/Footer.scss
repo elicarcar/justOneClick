@@ -1,0 +1,53 @@
+.footer {
+  a {
+    color: $white-soft;
+    font-weight: 100;
+    font-size: 0.9em;
+  }
+
+  .list-title {
+    margin-bottom: 20px;
+    color: $white;
+  }
+  &-top-wrapper {
+    justify-content: space-between;
+    & > section {
+      flex: 1;
+    }
+    h3 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1.5em;
+    }
+    .footer-list {
+      justify-content: space-around;
+
+      .kp-list {
+        flex-direction: column;
+      }
+    }
+
+    .footer-icons {
+      svg {
+        position: relative;
+        color: $white-soft;
+        font-size: 2.5em;
+        top: 0;
+        transition: color 500ms ease-in, top 300ms ease-in-out,
+          filter 400ms linear;
+
+        &:hover {
+          color: $white;
+          top: -2px;
+          filter: drop-shadow(0px 0px 4px $orange);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+}
