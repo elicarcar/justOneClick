@@ -20,15 +20,25 @@
         label="Phone"
         type="tel"
       />
+
+      <Textarea placeholder="Write your message" />
     </form>
+    <Button btnText="Submit" :handleClick="() => clickHandle()" />
   </div>
 </template>
 
 <script>
 import Input from '../Input'
+import Textarea from '../Textarea'
+import Button from '../Button'
 export default {
   name: 'ContactForm',
   props: { title: String },
-  components: { Input },
+  components: { Input, Textarea, Button },
+  methods: {
+    clickHandle() {
+      console.log('clicked')
+    },
+  },
 }
 </script>

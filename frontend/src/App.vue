@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav"></div>
+    <Nav :showNav="$route.name !== 'Home'" />
     <main>
       <router-view />
     </main>
@@ -10,10 +10,12 @@
 
 <script>
 import Footer from './components/Footer'
+import Nav from './components/Nav/Nav.vue'
 export default {
   name: 'App',
   components: {
     Footer,
+    Nav,
   },
 }
 </script>

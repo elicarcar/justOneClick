@@ -1,5 +1,5 @@
 <template>
-  <div class="container nav-container-sticky">
+  <div class="container nav-container-sticky" v-if="showNav">
     <div class="nav-wrapper">
       <section class="logo">
         <img src="" alt="logo" />
@@ -31,6 +31,9 @@ export default {
     return {
       open: false,
     }
+  },
+  props: {
+    showNav: Boolean,
   },
   components: { NavItem },
   methods: {

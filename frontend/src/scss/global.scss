@@ -63,6 +63,21 @@ small {
   font-size: small;
 }
 
+textarea {
+  margin: 30px 0px 0px;
+  outline: rgb(255, 37, 58);
+  font-family: 'Dosis', sans-serif;
+  width: 80%;
+  resize: none;
+  border: 1px solid $orange;
+
+  &::placeholder {
+    text-indent: 5px;
+    padding-right: 5px;
+    font-size: 1.2em;
+  }
+}
+
 .h-thin {
   font-weight: 100;
 }
@@ -83,6 +98,17 @@ li {
   list-style: none;
   text-transform: capitalize;
   font-weight: 500;
+}
+
+.btn {
+  font-family: 'Dosis', 'sans-serif';
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border: 2px groove $orange2;
+  background: $orange;
+  color: $white;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 //layout

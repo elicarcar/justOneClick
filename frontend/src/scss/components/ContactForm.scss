@@ -28,7 +28,7 @@
   }
   &-flex-wrapper {
     @include media-is(tablet-custom, true) {
-      height: 300px;
+      height: 400px;
     }
     .side-block {
       min-width: 200px;

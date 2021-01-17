@@ -7,7 +7,7 @@
           <ContactForm title="Contact Us!" />
           <TitleDescription
             title="Need a demo?"
-            description="You like what you see but want to see what we can contribute to your company? Schedule a caal with us."
+            description="You like what you see but want to see what we can contribute to your company? Schedule a call with us."
           />
         </div>
       </Modal>

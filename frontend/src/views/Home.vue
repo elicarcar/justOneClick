@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Banner />
-    <Nav />
+    <Nav :showNav="$route.name === 'Home'" />
     <IntroBlock />
   </div>
 </template>
