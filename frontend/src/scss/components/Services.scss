@@ -1,0 +1,52 @@
+.services {
+  &-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 80px;
+
+    .services-card {
+      max-width: 200px;
+      box-shadow: 1px 1px 10px gray;
+      padding: 15px;
+
+      &-description {
+        font-size: 0.8rem;
+        color: $black-softer;
+        line-height: 20pt;
+      }
+
+      a {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        &::before,
+        &::after {
+          content: ' ';
+          display: inline-block;
+          height: 0.01em;
+          background: $black;
+          transition: flex 300ms ease-in-out;
+        }
+
+        &::before {
+          flex: 0;
+        }
+        &::after {
+          flex: 1;
+        }
+
+        &:hover {
+          &::after {
+            flex: 0;
+          }
+          &::before {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}

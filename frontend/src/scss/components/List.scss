@@ -17,6 +17,22 @@
       justify-content: center;
     }
 
+    &.before-enter {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 600ms ease-in-out;
+      @for $x from 1 through 7 {
+        &:nth-child(#{$x}) {
+          transition-delay: 300ms * $x;
+        }
+      }
+    }
+
+    &.enter {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+
     .item-inner {
       @include media-is(mobile) {
         width: 100%;

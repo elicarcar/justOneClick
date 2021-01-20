@@ -1,5 +1,5 @@
 <template>
-  <dt class="kp-item flex">
+  <dt v-scroll-animation class="kp-item flex">
     <div class="item-inner flex">
       <font-awesome-icon :icon="[fas, fasIcon]" class="icons-orange" />
       <section>

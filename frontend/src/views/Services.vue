@@ -1,13 +1,42 @@
 <template>
   <div class="services">
-    <Nav />
+    <section class="block container ">
+      <section class="services-card-list">
+        <ServiceCards
+          serviceName="SEO"
+          description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+          link="#"
+        />
+        <ServiceCards
+          serviceName="Wordpress"
+          description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+          imagePath="../assets/WordPress-alternative.png"
+          link="#"
+        />
+        <ServiceCards
+          serviceName="SPA"
+          description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+          link="#"
+        />
+        <ServiceCards
+          serviceName="SEO"
+          description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+          link="#"
+        />
+        <ServiceCards
+          serviceName="SEO"
+          description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+          link="#"
+        />
+      </section>
+    </section>
   </div>
 </template>
 
 <script>
-import Nav from '../components/Nav/Nav.vue'
+import ServiceCards from '../components/ServiceCards'
 export default {
   name: 'Services',
-  components: { Nav },
+  components: { ServiceCards },
 }
 </script>

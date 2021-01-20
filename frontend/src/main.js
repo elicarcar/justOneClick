@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import ScrollAnimation from './directives/scrollAnimation'
 import router from './router'
 import store from './store'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -13,6 +14,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import './scss/index.scss'
 
+Vue.directive('scroll-animation', ScrollAnimation)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
