@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home page">
     <Banner />
     <Nav :showNav="$route.name === 'Home'" />
     <IntroBlock />

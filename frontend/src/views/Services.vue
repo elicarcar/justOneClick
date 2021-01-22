@@ -1,5 +1,5 @@
 <template>
-  <div class="services">
+  <div class="services page">
     <section class="block container ">
       <section class="services-card-list">
         <ServiceCards

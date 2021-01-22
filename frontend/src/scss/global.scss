@@ -113,6 +113,10 @@ li {
 
 //layout
 
+.page {
+  min-height: 100vh;
+}
+
 .flex {
   display: flex;
   align-items: flex-start;

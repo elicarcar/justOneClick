@@ -1,0 +1,117 @@
+.team {
+  width: 100%;
+  .team-intro {
+    margin: 60px;
+  }
+  .members {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .member-block {
+      margin: 40px;
+      max-width: 20vw;
+      &:nth-child(2) {
+        transform: translateY(100px);
+      }
+
+      &:nth-child(1) {
+        .member-card {
+          &.before-enter {
+            @include before-enter-anim(0px, 300ms, 100px);
+          }
+          &.enter {
+            @include enter-anim;
+          }
+
+          .member-card-inner {
+            flex-direction: row-reverse;
+            &:before {
+              @include blockBackground(-10%, 2em, 10px, 10px, $orange);
+            }
+            &::after {
+              @include blockBackground(
+                5%,
+                -1em,
+                10px,
+                10px,
+                lighten($orange, 10)
+              );
+              mix-blend-mode: hard-light;
+            }
+
+            .member-card-body {
+              text-align: right;
+              margin: 5px;
+              flex: 0;
+              flex-basis: 40%;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .member-card {
+          &.before-enter {
+            @include before-enter-anim(0px, 600ms, -100px);
+          }
+          &.enter {
+            @include enter-anim;
+          }
+          .member-card-inner {
+            flex-direction: row;
+            &:before {
+              @include blockBackground(0%, -2em, 10px, 10px, $orange);
+            }
+            &::after {
+              @include blockBackground(
+                -10%,
+                10px,
+                10px,
+                10px,
+                lighten($orange, 10)
+              );
+              mix-blend-mode: hard-light;
+            }
+            .member-card-body {
+              text-align: left;
+              margin: 5px;
+              flex: 0;
+              flex-basis: 40%;
+            }
+          }
+        }
+      }
+    }
+    .member-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      min-width: 300px;
+
+      .member-card-inner {
+        display: flex;
+      }
+
+      .member-img {
+        max-width: 200px;
+        height: 250px;
+        cursor: pointer;
+        flex: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border: 3px solid $black-softer;
+        }
+      }
+      .member-card-body {
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

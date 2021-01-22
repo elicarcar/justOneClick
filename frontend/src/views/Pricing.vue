@@ -1,5 +1,5 @@
 <template>
-  <div class="pricing">
+  <div class="pricing page">
     <Nav />
   </div>
 </template>

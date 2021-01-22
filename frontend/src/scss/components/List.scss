@@ -18,9 +18,7 @@
     }
 
     &.before-enter {
-      opacity: 0;
-      transform: translateY(100px);
-      transition: all 600ms ease-in-out;
+      @include before-enter-anim(100px, 600ms);
       @for $x from 1 through 7 {
         &:nth-child(#{$x}) {
           transition-delay: 300ms * $x;
@@ -29,8 +27,7 @@
     }
 
     &.enter {
-      opacity: 1;
-      transform: translateX(0px);
+      @include enter-anim;
     }
 
     .item-inner {

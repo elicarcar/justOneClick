@@ -27,7 +27,7 @@ $breakpoints: (
       @media (max-width: $value) {
         @content;
       }
-    } @else {
+    } @else if $invert == true {
       @media (min-width: $value + 1) {
         @content;
       }

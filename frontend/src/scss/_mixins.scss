@@ -35,3 +35,37 @@
     }
   }
 }
+
+@mixin blockBackground(
+  $left,
+  $bottom,
+  $margin,
+  $padding: unset,
+  $color: $orange
+) {
+  content: ' ';
+  display: block;
+  background: $color;
+
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin before-enter-anim($translateY, $transTime, $translateX: 'unset') {
+  opacity: 0;
+  transform: translateY($translateY);
+  transform: translateX($translateX);
+  transition: all $transTime ease-in-out;
+}
+
+@mixin enter-anim() {
+  opacity: 1;
+  transform: translateX(0px);
+}

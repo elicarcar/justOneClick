@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact page">
     <Nav />
     <div class="contact-page-wrapper">
       <Modal>
